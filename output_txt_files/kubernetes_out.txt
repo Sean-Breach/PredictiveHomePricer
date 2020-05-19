@@ -1,1 +1,9 @@
-<paste log output from Kubernetes-mediated prediction, here>
+diluj769@C0001-DILUJ769B MINGW64 ~/git/PredictiveHomePricer (master)
+$ ./run_kubernetes.sh
+pod/predictive-home-pricer created
+Waiting for predictive-home-pricer pod to be ready
+NAME                     READY   STATUS    RESTARTS   AGE
+predictive-home-pricer   1/1     Running   0          3s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
