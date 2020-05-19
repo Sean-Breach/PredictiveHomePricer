@@ -42,3 +42,31 @@ In this project, I have applied the skills acquired in [Udacity's Cloud DevOps E
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+---
+
+### Repo File Documentation
+
+* **.circleci** - Folder for the CircleCI **config.yml** for Continuously Integratation with Each Build
+* **model_data** - Folder for the modeling data (_housing.csv_) and library for the predictor (_boston_housing_prediction.joblib_)
+* **output_txt_files** - Folder for the Docker (_docker_out.txt_) and Kubernetes (_kubernetes_out.txt_) log outputs
+* **.gitignore** - Tells Git to Ignore Specific Files/Folders for Python
+* **Dockerfile** - Used to Setup/Build Docker Image
+  * Setting _app_ as Working Directory
+  * Copying _app.py_ to Working Directory
+  * Install/Upgrade PIP and Other Requirements Into Image
+  * Expose Port 80 and Launch _app.py_ Flask Application
+* **LICENSE** - License file for the Project
+* **Makefile** - A series of directives for Build Automation of the Dockerfile Image
+  * Creating Python3 Virtual Environment
+  * Install/Upgrade PIP and Other Requirements
+  * Linting Python (pylint) and Dockerfile (hadolint)
+* **README.md** - Your Helpful Guide to this Crazy Project's Purpose
+* **app.py** - Flask Application to Predict Home Pricing
+* **make_prediction.sh** - Shell to Call Flask Application and Get Prediction
+* **requirements.txt** - List of Libraries to Install via _Dockerfile_ and _Makefile_
+* **run_docker.sh** - Shell to Run Docker Image and Assign Host Port 8000 to Container's Port 80
+* **run_kubernetes.sh** - Shell to Run Docker Hub Container with Kubernetes and Show Log Details
+* **upload_docker.sh** - Shell to Upload Docker Local Image to Docker Hub
+  * Note: It asks you to authenticate with my username. This will need to be changed to your Docker Hub account
+
